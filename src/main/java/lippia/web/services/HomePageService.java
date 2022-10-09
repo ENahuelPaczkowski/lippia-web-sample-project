@@ -22,9 +22,13 @@ public class HomePageService extends ActionManager {
     public static void clickHomeButton() {
         click(HomePageConstants.HOME_BUTTON);
     }
+    public static void verifySlider(int number) {
+        List<WebElement> elements = getElements(HomePageConstants.SLIDER);
+        Assert.assertEquals(elements.size(), number);
+    }
 
-    public static void verifySlider(int numero) {
-        List<WebElement> elements = getElements(HomePageConstants.SLIDER_CHILD);
-        Assert.assertEquals(elements.size(), numero);
+    public static void verifyArrivals(int number) {
+        List<WebElement> elements = getElements(HomePageConstants.ARRIVALS);
+        Assert.assertEquals(elements.size(), number);
     }
 }

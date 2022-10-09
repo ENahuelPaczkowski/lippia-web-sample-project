@@ -37,9 +37,9 @@ public class LoginSteps extends PageSteps{
         LoginService.enterPassword(password);
     }
 
-    @Then("password should be mascked")
-    public void verifyMasckedPassword() {
-        LoginService.verifyMasckedPassword();
+    @Then("password {string} should be mascked")
+    public void verifyMasckedPassword(String password) {
+        LoginService.verifyMasckedPassword(password);
     }
 
     @Then("show message error: {string}")

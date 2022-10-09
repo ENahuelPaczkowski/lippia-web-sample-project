@@ -18,11 +18,11 @@ public class LoginService extends ActionManager{
     }
 
     public static void enterUsername(String username) {
-        setInput(LoginConstants.USERNAME_TEXTBOX, username);
+        setInput(LoginConstants.LOGIN_USERNAME_TEXTBOX, username);
     }
 
     public static void enterPassword(String password) {
-        setInput(LoginConstants.PASSWORD_TEXTBOX, password);
+        setInput(LoginConstants.LOGIN_PASSWORD_TEXTBOX, password);
     }
 
     public static void clickLoginBuuton() {
@@ -45,7 +45,7 @@ public class LoginService extends ActionManager{
         Assert.assertTrue(getElement(String.format(LoginConstants.LOGIN_ERROR, message)).isDisplayed());
     }
 
-    public static void verifyMasckedPassword(){
-        Assert.assertFalse("Nahuel.123".equals(getElement(LoginConstants.PASSWORD_TEXTBOX).getText()));
+    public static void verifyMasckedPassword(String password){
+        Assert.assertFalse(password.equals(getElement(LoginConstants.LOGIN_PASSWORD_TEXTBOX).getText()));
     }
 }

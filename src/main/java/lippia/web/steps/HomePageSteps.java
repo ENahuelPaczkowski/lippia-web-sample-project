@@ -22,12 +22,12 @@ public class HomePageSteps extends PageSteps {
     }
 
     @Then("the client verify that Home page has '(.*)' Sliders only")
-    public void verifySliders(int numero) {
-        HomePageService.verifySlider(numero);
+    public void verifySliders(int number) {
+        HomePageService.verifySlider(number);
     }
 
-    @Then("the client verify tha Home page has three arrivals only")
-    public void verifyArrivals() {
-//        HomePageService.verify();
+    @Then("the client verify tha Home page has '(.*)' arrivals only")
+    public void verifyArrivals(int number) {
+        HomePageService.verifyArrivals(number);
     }
 }
