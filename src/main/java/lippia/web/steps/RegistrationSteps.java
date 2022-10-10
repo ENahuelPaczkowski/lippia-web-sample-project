@@ -27,6 +27,8 @@ public class RegistrationSteps extends PageSteps {
     }
 
     @Then("show registration message error: {string}")
-    public void verifyRegistration() {
+    public void verifyRegistration(String message) {
+        RegistrationService.verifyErrorMessage(message);
     }
+
 }

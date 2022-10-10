@@ -20,13 +20,6 @@ public class LoginSteps extends PageSteps{
         LoginService.clickLoginBuuton();
     }
 
-//    @When("enter <username> in username texbox <password> in password textbox and click on login button")
-//    public void loginFail(String username, String password) {
-//        LoginService.enterUsername(username);
-//        LoginService.enterPassword(password);
-//        LoginService.clickLoginBuuton();
-//    }
-
     @Then("login to the web page")
     public void verifyLogin() {
         LoginService.verifyResults();

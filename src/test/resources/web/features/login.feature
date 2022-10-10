@@ -1,8 +1,8 @@
 @Login
 Feature: Login
-
   Background:
     Given the client enter the Home page
+
 #  1. Log-in with valid username and password.
 #  1) Open the browser
 #  2) Enter the URL “http://practice.automationtesting.in/”
@@ -11,14 +11,13 @@ Feature: Login
 #  5) Enter password in password textbox
 #  6) Click on login button
 #  7) User must successfully login to the web page
-
   Scenario: Login Succes
     When the client click on My Account Menu
     And enter 'nahuelpaco' in username texbox 'Nahuel.123' in password textbox and click on login button
     Then login to the web page
+    When the client click on My Account Menu
 
     Scenario Outline: Login Failure
-      When the client click on My Account Menu
       And enter "<username>" in username texbox "<password>" in password textbox and click on login button
       Then show message error: '<message>'
 
@@ -41,6 +40,5 @@ Feature: Login
 #    5) The password field should display the characters in asterisks or
 #    bullets such that the password is not visible on the screen
     Scenario: Mascked password
-      When the client click on My Account Menu
       And enter 'Nahuel.123' in password texbox
       Then password 'Nahuel.123' should be mascked
